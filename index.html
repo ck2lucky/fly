@@ -1,13 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하이 퍼스트</title>
+    <meta charset="utf-8">
+    <title>반응형 웹</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.js"></script>
 </head>
 <body>
-    <div class="box">박스</div>
-    굿샷~
+    <header>
+        <div id="innerHeader">
+            <p id="topmenu">
+                <a href="#"><i class="xi-log-in"></i> 로그인</a> &nbsp;|&nbsp;
+                <a href="#"><i class="xi-users-plus"></i> 회원가입</a> &nbsp;|&nbsp;
+                <a href="#"><i class="xi-sitemap"></i> 사이트맵</a>
+            </p>
+            <a href="#" id="logo"><img src="http://placehold.it/200x60" alt="로고이미지"></a>
+            <nav>
+                <ul id="gnb">
+                    <li>
+                        <a href="#">Main Menu 01</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sub Menu 1-1</a></li>
+                            <li><a href="#">Sub Menu 1-2</a></li>
+                            <li><a href="#">Sub Menu 1-3</a></li>
+                            <li><a href="#">Sub Menu 1-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Main Menu 02</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sub Menu 2-1</a></li>
+                            <li><a href="#">Sub Menu 2-2</a></li>
+                            <li><a href="#">Sub Menu 2-3</a></li>
+                            <li><a href="#">Sub Menu 2-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Main Menu 03</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sub Menu 3-1</a></li>
+                            <li><a href="#">Sub Menu 3-2</a></li>
+                            <li><a href="#">Sub Menu 3-3</a></li>
+                            <li><a href="#">Sub Menu 3-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Main Menu 04</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sub Menu 4-1</a></li>
+                            <li><a href="#">Sub Menu 4-2</a></li>
+                            <li><a href="#">Sub Menu 4-3</a></li>
+                            <li><a href="#">Sub Menu 4-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="slide">
+        <div class="slideItem" style="background-image: url(http://placehold.it/1920x800)">
+            <h2>Slide Title Here 01</h2>
+            <p>대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+        </div>
+        <div class="slideItem" style="background-image: url(http://placehold.it/1920x800)">
+            <h2>Slide Title Here 02</h2>
+            <p>대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+        </div>
+        <div class="slideItem" style="background-image: url(http://placehold.it/1920x800)">
+            <h2>Slide Title Here 03</h2>
+            <p>대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+        </div>
+        <div class="slideItem" style="background-image: url(http://placehold.it/1920x800)">
+            <h2>Slide Title Here 04</h2>
+            <p>대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+        </div>
+        <i class="xi-angle-left-thin prev"></i>
+        <i class="xi-angle-right-thin next"></i>
+    </div>
+    <section>
+        <div class="item">
+            <img src="http://placehold.it/400x300" alt="Item Image">
+            <h3>아티클 타이틀 01</h3>
+            <p>대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+            <a href="#" class="more">더보기 ▶</a>
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/400x300" alt="Item Image">
+            <h3>아티클 타이틀 02</h3>
+            <p>대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+            <a href="#" class="more">더보기 ▶</a>
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/400x300" alt="Item Image">
+            <h3>아티클 타이틀 03</h3>
+            <p>대법원에 대법관을 둔다. 다만, 법률이 정하는 바에 의하여 대법관이 아닌 법관을 둘 수 있다. 국가안전보장회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다. 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</p>
+            <a href="#" class="more">더보기 ▶</a>
+        </div>
+    </section>
+    <footer>
+        <div id="flogo">
+            <img src="http://placehold.it/200x60" alt="하단 로고 이미지">
+        </div>
+        <div id="copyright">
+            &copy;이 사이트의 모든 콘텐츠의 소유권은 (주)국제에 있습니다.<br>
+            무단 전제 및 복제를 금지합니다.
+        </div>
+    </footer>
 </body>
 </html>
