@@ -17,9 +17,21 @@
         box.style.height = "300px";
         box.style.background = "#ffa";
         box.style.textAlign = "center";
+        box.style.lineHeight = "300px";
+        box.style.fontSize = "5rem";
+
+        var btn = document.querySelector("button");
+        btn.style.width = "150px";
+        btn.style.textAlign = "center";
+        btn.style.lineHeight = "40px";
+        btn.addEventListener('click', refresh);
 
         nNumber = Math.ceil(Math.random()*6) //1~6
         box.innerHTML = nNumber;
+
+        function  refresh(){
+            window.location.reload();
+        }
     </script>
 </body>
 </html>
