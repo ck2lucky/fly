@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>random box</title>
-    
+    <style>
+        li{list-style: none;}
+    </style>
 </head>
 <body>
-    <div class="box">어떤 수가 나올까요?</div>
+    <div class="box">?</div>
+    <div class="graph"></div>
     <button>go</button>
 
     <script>
+        var graphWidth = 300;
         var box = document.querySelector(".box");
         box.style.width = "300px";
         box.style.height = "300px";
@@ -20,17 +24,23 @@
         box.style.lineHeight = "300px";
         box.style.fontSize = "5rem";
 
+        var graph = document.querySelector(".graph");
+        graph.style.width = graphWidth + "px";
+        graph.style.height = "50px";
+        graph.style.border = "1px #333 solid";
+        graph.style.boxSizing = "border-box";
+
         var btn = document.querySelector("button");
-        btn.style.width = "150px";
+        btn.style.width = "300px";
         btn.style.textAlign = "center";
         btn.style.lineHeight = "40px";
-        btn.addEventListener('click', refresh);
-
-        nNumber = Math.ceil(Math.random()*6) //1~6
-        box.innerHTML = nNumber;
+        btn.addEventListener("click", refresh);
 
         function  refresh(){
-            window.location.reload();
+            nNumber = Math.ceil(Math.random()*6) //1~6
+            box.innerHTML = nNumber;            
+            graphWidth = 50 * nNumber;
+            graph.style.width = graphWidth + "px";
         }
     </script>
 </body>
