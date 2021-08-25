@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random Color</title>
+</head>
+<body>
+    <div class="box"></div>
+    <button>go</button>
+
+    <script>
+        var graphWidth = 300;
+        var box = document.querySelector(".box");
+        box.style.width = "300px";
+        box.style.height = "300px";
+        box.style.background = "#ffa";
+
+        var btn = document.querySelector("button");
+        btn.style.width = "300px";
+        btn.style.textAlign = "center";
+        btn.style.lineHeight = "40px";
+        btn.addEventListener("click", ranColor);
+
+        function ranColor(){
+            var r = Math.floor(Math.random()*256); //0 ~ 255
+            var g = Math.floor(Math.random()*256);
+            var b = Math.floor(Math.random()*256);
+            var alpha = (Math.floor(Math.random()*6) + 5) / 10; // 0.5 ~ 1
+
+            //box.style.background = "rgba(" + r + "," + g + "," + b + "," + alpha + ")";
+            box.style.background = `rgba(${r},${g},${b},${alpha})`;
+        }
+    </script>
+        
+</body>
+</html>
