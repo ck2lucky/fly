@@ -18,7 +18,11 @@
             display: flex;
             flex-wrap: wrap;
         }
-        .card{width:100px; height:100px;}
+        .card{
+            width:100px; height:100px;
+            text-align: center;
+            line-height: 100px;
+        }
     </style>
 </head>
 <body>
@@ -33,5 +37,19 @@
         <div class="card">8</div>
         <div class="card">9</div>
     </div>
+
+    <script>
+        var num = [11,22,33,44,55,66,77,88,99];
+        var nNum = [];
+        while(num.length){
+            var ranNum = Math.floor(Math.random()*num.length);
+            nNum.push(num.splice(ranNum,1));
+        }
+        
+        var card = document.querySelectorAll(".card");
+        for(var i=0; i<card.length; i++){
+            card[i].innerHTML = nNum[i];
+        }
+    </script>
 </body>
 </html>
