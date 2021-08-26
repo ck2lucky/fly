@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random Insert Num</title>
+    <style>
+        *{margin:0; padding:0;}
+        #wrap{
+            width:300px;
+            height:300px;
+            outline: 3px dodgerblue solid;
+            position: absolute;
+            top:50%; left:50%;
+            transform: translate(-50%,-50%);
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card{
+            width:100px; height:100px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+    </div>
+
+    <script>
+        var num = [
+            "https://cdn.pixabay.com/photo/2021/08/22/15/39/kid-6565461__340.jpg",
+            "https://cdn.pixabay.com/photo/2021/07/28/19/28/bee-6503344__340.jpg",
+            "https://cdn.pixabay.com/photo/2021/08/23/17/53/cat-6568422__340.jpg",
+            "https://cdn.pixabay.com/photo/2021/07/11/10/39/fantasy-6403406__340.jpg",
+            "https://cdn.pixabay.com/photo/2021/07/13/09/37/dogs-6463032__340.jpg",
+            "https://cdn.pixabay.com/photo/2021/08/16/09/21/seagulls-6549872__340.jpg",
+            "https://cdn.pixabay.com/photo/2021/07/25/12/19/building-6491721__340.jpg",
+            "https://cdn.pixabay.com/photo/2021/07/30/11/49/girl-6509455__340.jpg",
+            "https://cdn.pixabay.com/photo/2019/11/19/10/07/olives-4636996__340.jpg"
+        ];
+        var nNum = [];
+        while(num.length){
+            var ranNum = Math.floor(Math.random()*num.length);
+            nNum.push(num.splice(ranNum,1));
+        }
+        
+        var card = document.querySelectorAll(".card");
+        for(var i=0; i<card.length; i++){
+            card[i].style.backgroundImage = `url("${nNum[i]}")`;
+            card[i].style.backgroundSize = "cover";
+            card[i].style.backgroundPosition = "center center";
+        }
+    </script>
+</body>
+</html>
