@@ -15,15 +15,15 @@ window.addEventListener("load", function() {
             popup.style.display = "block";
             popup.children[0].innerHTML = "방가방가";
         }
-        if(e.target.classList.contains("st1")) {
+        if(e.target.classList.contains("st2")) {
             popup.style.display = "block";
             popup.children[0].innerHTML = "굿모닝";
         }
-        if(e.target.classList.contains("st1")) {
+        if(e.target.classList.contains("st3")) {
             popup.style.display = "block";
             popup.children[0].innerHTML = "식사하셨습니까?";
         }
-        if(e.target.classList.contains("st1")) {
+        if(e.target.classList.contains("st4")) {
             popup.style.display = "block";
             popup.children[0].innerHTML = "잘가요~~";
         }
