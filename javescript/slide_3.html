@@ -67,7 +67,7 @@
             interval = setInterval(go,2000);
         }
 
-        function go(e){
+        function go(){
             
             if(pre > 2){
                 pre = 0;
@@ -95,10 +95,9 @@
             ],600);
             ani.addEventListener('finish',function(){
                 slide.style.transform="translateX(-"+ 25 * next +"%)";
-                pre = next;
+                pre = Number(next);
                 next = pre+1;
-                pre++
-                next++;
+                
                 setTimeout(start,2000);
             });                
            
