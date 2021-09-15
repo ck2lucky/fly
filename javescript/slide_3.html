@@ -60,6 +60,7 @@
         var interval;
         var pre = 0;
         var next = 1;
+        var cns =0;
         
         dotlink.addEventListener('click', rego);
 
@@ -88,6 +89,13 @@
 
         function rego(e){
             clearInterval(interval);
+            
+            if (cns) return; //함수에서 빠져 나옵니다.
+            cns = 1; //클릭 안돼!!
+            setTimeout(function() {
+                cns = 0;
+            }, 1000);
+
             next = e.target.getAttribute("indexNum");
             var ani = slide.animate([
                 {transform : "translateX(-"+ 25 * pre +"%)"},
@@ -96,9 +104,11 @@
             ani.addEventListener('finish',function(){
                 slide.style.transform="translateX(-"+ 25 * next +"%)";
                 pre = Number(next);
-                next = pre+1;
+                next = pre + 1;
+
+                console.log(pre,next);
                 
-                setTimeout(start,2000);
+                setTimeout(start,1000);
             });                
            
         }
