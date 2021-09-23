@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empForm</title>
+    <style>
+        table,tr,th,td{border:1px #ccc solid; /*  border-collapse: collapse; */}
+        td{line-height: 30px; width:250px; text-align: center;
+         padding:5px 20px;
+        }
+        th{width:150px;}
+        table input{width:100%;}
+    </style>
+</head>
+<body>
+    <form action="insertData.php" method="GET" target="_blank">
+        <input type="hidden" name="empno">
+        <table>
+            <tr><th>이름 : </th><td><input type="text" name="ename"></td></tr>
+            <tr><th>직급 : </th><td><input type="text" name="job"></td></tr>
+            <tr><th>매니저 정보 : </th><td><input type="text" name="mgr"></td></tr>
+            <tr><th>입사일 : </th><td><input type="date" name="hiredate"></td></tr>
+            <tr><th>급여 : </th><td><input type="text" name="sal"></td></tr>
+            <tr><th>보너스 : </th><td><input type="text" name="comm"></td></tr>
+            <tr><th>부서코드 : </th><td><input type="text" name="deptno"></td></tr>
+        </table>
+        <input type="submit" value="전송하기">
+    </form>
+</body>
+</html>
