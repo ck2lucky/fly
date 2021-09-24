@@ -10,8 +10,25 @@
         td{line-height: 30px; width:250px; text-align: center;
          padding:5px 20px;
         }
+        a{text-decoration: none; color:inherit;}
         th{width:150px;}
         table input{width:100%;}
+        input[type="submit"]{
+            width:450px;
+            line-height: 40px;
+            height: 40px;
+            margin: 10px 0;
+        }
+        button{
+            width:145px;
+            line-height: 40px;
+            margin: 10px 0;
+        }
+        button:last-child{
+            width:450px;
+            line-height: 40px;
+            margin:0;
+        }
     </style>
 </head>
 <body>
@@ -22,11 +39,25 @@
             <tr><th>직급 : </th><td><input type="text" name="job"></td></tr>
             <tr><th>매니저 정보 : </th><td><input type="text" name="mgr"></td></tr>
             <tr><th>입사일 : </th><td><input type="date" name="hiredate"></td></tr>
-            <tr><th>급여 : </th><td><input type="text" name="sal"></td></tr>
-            <tr><th>보너스 : </th><td><input type="text" name="comm"></td></tr>
+            <tr><th>급여 : </th><td><input type="text" name="sal" value="0"></td></tr>
+            <tr><th>보너스 : </th><td><input type="text" name="comm" value="0"></td></tr>
             <tr><th>부서코드 : </th><td><input type="text" name="deptno"></td></tr>
         </table>
-        <input type="submit" value="전송하기">
+        <input type="submit" value="전송하기"><br>
+        
+        <button><a href="showtable.php" target="_blank">테이블 보기</a></button>
+        <button><a href="createTable.php" target="_blank">테이블 생성</a></button>
+        <button><a href="#" onclick="droptable()" target="_blank">테이블 삭제</a></button><br>
+        <button><a href="allinsert.php" target="_blank">데이터 전부 넣기</a></button>
+        
     </form>
+
+    <script>
+        function droptable(){
+            var con = confirm("정말로 테이블을 삭제 하시겠습니까?");
+
+            if(con) window.open("dropTable.php", "");
+        }
+    </script>
 </body>
 </html>
